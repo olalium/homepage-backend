@@ -2,7 +2,8 @@
   "name": "homepage-app",
   "version": "1.0.0",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "cloudinary": "1.11.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
