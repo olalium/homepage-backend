@@ -17,7 +17,7 @@ app.get('/api/ping', (req,res) => {
 });
 
 app.get('/api/picturedata', (req,res) => {
-    return cloudinary.v2.api.resources({type: 'upload', prefix: 'homepage'}).then(result  => res.send(result));
+    return cloudinary.v2.api.resources({type: 'upload', prefix: 'homepage'}).then(result  => res.send(result.resources));
 });
 
 app.listen(port);
