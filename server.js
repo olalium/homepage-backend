@@ -6,8 +6,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 cloudinary.config({
-    cloud_name: 'CLOUD_NAME',
-    api_key: 'API_KEY',
+    cloud_name: 'ollicolli',
+    api_key: '215194685648969',
     api_secret: 'SECRET'
 });
 
@@ -17,6 +17,7 @@ app.get('/api/ping', (req,res) => {
 });
 
 app.get('/api/picturedata', (req,res) => {
+    cloudinary.v2.api.resources({type: 'upload', prefix: 'homepage'}, function(error, result){console.log(result);});
     return res.send({ data: "hei"});
 });
 
