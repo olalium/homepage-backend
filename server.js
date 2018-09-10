@@ -21,9 +21,5 @@ app.get('/api/picturedata', (req,res) => {
     return res.send({ data: "hei"});
 });
 
-app.get('*', (req, res) => {
-    return res.sendFile(path.join(__dirname, 'homepage/build', 'index.html'));
-});
-
 app.listen(port);
 console.log('App is listening on port ' + port);
