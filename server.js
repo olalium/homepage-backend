@@ -20,5 +20,5 @@ app.get('/api/picturedata', (req,res) => {
     return cloudinary.v2.api.resources({type: 'upload', prefix: 'homepage'}).then(result  => res.send(result.resources));
 });
 
-app.listen(port);
-console.log('App is listening on port ' + port);
+app.listen(port, 'localhost');
+console.log('App is listening on port ' + port + 'on localhost');
